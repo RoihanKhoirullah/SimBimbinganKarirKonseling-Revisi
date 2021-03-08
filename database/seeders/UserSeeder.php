@@ -17,11 +17,13 @@ class UserSeeder extends Seeder
     {
         User::truncate();
         User::Create([
-            'name' => '',
-            'level' => '',
-            'email' => '',
-            'password' => bcrypt(''),
-            'remmeber_token' => Str::random(60),
+            'name' => 'Admin',
+            'mapel' => '-',
+            'level' => 'admin',
+            'email' => 'admin',
+            'password' => bcrypt('admin'),
+            // 'remmeber_token' => Str::random(60),
         ]);
+        
     }
 }
