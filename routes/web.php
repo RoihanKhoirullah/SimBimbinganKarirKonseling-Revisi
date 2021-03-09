@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//HOME
+Route::get('/index','user\HomeController@index');
+
+Route::get('/profile','user\ProfileController@index');
+
 // LOGIN
 Route::get('/login', function () {
     return view('Pengguna.login');
