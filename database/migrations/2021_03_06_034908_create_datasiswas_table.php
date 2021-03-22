@@ -21,6 +21,7 @@ class CreateDatasiswasTable extends Migration
             $table->string('rombel');
             $table->string('rayon');
             $table->string('masalah');
+            $table->string('penyelesaianmasalah');
             $table->timestamps();
         });
     }

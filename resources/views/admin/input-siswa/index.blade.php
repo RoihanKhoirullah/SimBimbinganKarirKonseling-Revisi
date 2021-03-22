@@ -79,7 +79,7 @@
                                   <select name="rombel" id="rombel" class="form-control" >
                                           <option>Rombel </option>
                                           <option value="rpl">Rpl</option>
-                                          <option value="tkj">Rpl</option>
+                                          <option value="tkj">Tkj</option>
                                           <option value="mmd">Mmd</option>
                                           <option value="bdp">Bdp</option>
                                           <option value="otkp">Otkp</option>
@@ -105,6 +105,12 @@
 
                                 <div class="form-group">
                                       <textarea class="form-control" name="masalah" id="masalah" rows="3" placeholder="Masalah" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                  <select name="penyelesaianmasalah" id="penyelesaianmasalah" class="form-control">
+                                          <option value="belum-selesai">Belum Selesai</option>
+                                  </select>
                                 </div>
 
                                 <br>

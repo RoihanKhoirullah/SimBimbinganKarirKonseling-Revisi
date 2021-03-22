@@ -65,6 +65,8 @@ Route::group(['middleware' => ['auth','ceklevel:admin,guru']], function() {
 Route::group(['middleware' => ['auth','ceklevel:admin,pembimbing-siswa']], function() {
 
     Route::get('/admin/data-siswa' , 'DatasiswaController@index')->name('input-siswa.index');
+    Route::get('/admin/datasiswa-edit/{id}' , 'DatasiswaController@edit')->name('edit');
+    Route::post('/update/{id}' , 'DatasiswaController@update')->name('update');
 
 });
 // END MULTI LOGIN

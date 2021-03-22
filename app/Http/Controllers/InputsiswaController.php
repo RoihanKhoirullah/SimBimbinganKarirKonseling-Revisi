@@ -43,6 +43,7 @@ class InputsiswaController extends Controller
             'rombel' => $request -> rombel,
             'rayon' => $request -> rayon,
             'masalah' => $request -> masalah,
+            'penyelesaianmasalah' => $request -> penyelesaianmasalah,
            
             
          ]);

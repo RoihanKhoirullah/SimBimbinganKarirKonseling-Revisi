@@ -10,5 +10,5 @@ class Datasiswa extends Model
     protected $table = "datasiswa";
     protected $primarykey = "id";
     protected $fillable = [
-        'id' , 'pelapor' , 'nis' , 'nama', 'rombel', 'rayon', 'masalah'];
+        'id' , 'pelapor' , 'nis' , 'nama', 'rombel', 'rayon', 'masalah' , 'penyelesaianmasalah'];
 }

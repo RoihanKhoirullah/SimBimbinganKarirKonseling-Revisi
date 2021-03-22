@@ -57,7 +57,8 @@ class DatasiswaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $datasiswa = Datasiswa::findOrFail($id);
+        return view('admin.data-siswa.edit', compact('datasiswa'));
     }
 
     /**
@@ -69,7 +70,10 @@ class DatasiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $datasiswa = Datasiswa::findorfail($id);
+        $datasiswa->update($request->all());
+
+        return redirect('admin/data-siswa')->with('success', 'Data Berhasil Diubah');
     }
 
     /**

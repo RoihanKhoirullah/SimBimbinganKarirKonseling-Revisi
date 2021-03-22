@@ -50,11 +50,13 @@
     <tr>
       <th>No</th>
       <th>Yang Melaporkan</th>
-      <th>NIS Siswa</th>
-      <th>Nama Siswa</th>
-      <th>Rombel Siswa</th>
-      <th>Rayon Siswa</th>
-      <th>Masalah Siswa</th>
+      <th>NIS </th>
+      <th>Nama </th>
+      <th>Rombel </th>
+      <th>Rayon </th>
+      <th>Masalah </th>
+      <th>Status </th>
+      <th>Aksi </th>
     </tr>
   </thead>
   <tbody>
@@ -70,6 +72,14 @@
         <td>{{ $item->rombel }}</td>
         <td>{{ $item->rayon }}</td>
         <td>{{ $item->masalah }}</td>
+        <td>{{ $item->penyelesaianmasalah }}</td>
+       
+        <td>
+
+            <a href="{{ route('edit', $item->id) }}"><i style="color : blue" class="material-icons"><i class="fas fa-edit"></i></i> </a>  
+            <!-- <a href="{{ route('delete', $item->id) }}"><i style="color : red" class="material-icons"><i class="fas fa-trash-alt"></i></i> </a> -->
+       
+        </td>
     </tr>
     @endforeach 
   </tbody>
