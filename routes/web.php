@@ -31,7 +31,7 @@ Route::post('/postlogin', 'LoginController@postlogin')->name('postlogin');
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
 // REGISTRASI
-// Route::get('/registrasi' , 'LoginController@registrasi')->name('registrasi');
+Route::get('/registrasi' , 'LoginController@registrasi')->name('registrasi');
 Route::post('/simpanregistrasi' , 'LoginController@simpanregistrasi')->name('simpanregistrasi');
 
 // DATA PENGGUNA
