@@ -3,6 +3,10 @@
 <html lang="en">
 <head>
   @include('Template.head')
+
+  <!-- CSS ONLY -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">   
+<!-- END CSS -->
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -38,15 +42,15 @@
     <!-- Main content -->
     
 <!-- /.card-header -->
-<div class="content">
+      <div class="content">
+      <button type="button" class="btn btn-primary my-2" data-toggle="modal" data-target="#addGalModal">
+            Tambah Data
+      </button>
       <div class="card card-info card-outline">
         <div class="card-header">
         <div class="row">
             <div class="col-lg-12 col-sm-12 col-md-9 offset">
-                  <button type="button" class="btn btn-primary my-2" data-toggle="modal" data-target="#addGalModal">
-                        Tambah Data
-                  </button>
-
+                  
   <!-- TAMBAH DATA -->
   <div class="modal fade" id="addGalModal" tabindex="-1" aria-labelledby="addAboutModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -61,13 +65,13 @@
                           <form action="/admin/datapengguna-store" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                  <input type="text" id="name" name="name" class="form-control" placeholder="Nama Lengkap" >
+                                  <input type="text" id="name" name="name" class="form-control" placeholder="Nama Lengkap" required>
                                 </div>
 
                                 <div class="form-group">
-                                  <select name="mapel" id="mapel" class="form-control">
-                                          <option>Mata Pelajaran</option>
-                                          <option>-</option>
+                                  <select name="mapel" id="mapel" class="form-control" required>
+                                          <option value="">Mata Pelajaran</option>
+                                          <option value="-">-</option>
                                           <option value="Bahasa-Indonesia">Bahasa Indonesiaa</option>
                                           <option value="Bahasa-Inggris">Bahasa Inggris</option>
                                           <option value="Matematika">Matematika</option>
@@ -78,19 +82,19 @@
                                 </div>
 
                                 <div class="form-group">
-                                  <select name="level" id="level" class="form-control">
-                                          <option>Level</option>
+                                  <select name="level" id="level" class="form-control" required>
+                                          <option value="">Level</option>
                                           <option value="guru">Guru</option>
                                           <option value="pembimbing-siswa">Pembimbing Siswa</option>
                                   </select>
                                 </div>
                               
                                 <div class="form-group">
-                                  <input type="text" id="email" name="email" class="form-control" placeholder="Username">
+                                  <input type="text" id="email" name="email" class="form-control" placeholder="Username" required>
                                 </div>
 
                                 <div class="form-group">
-                                  <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                                  <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                                 </div>
 
                                 <br>
@@ -107,50 +111,44 @@
     </div>
   </div>
 </div>
-      <div class="card-tools">
-  </div>
-</div>
 
-<div class="card-body table-responsive p-0">
-<table class="table table-hover text-nowrap">
-  <thead>
-    
-    <tr>
-      <th>No</th>
-      <th>Nama Lengkap</th>
-      <th>Mata Pelajaran</th>
-      <th>Level</th>
-      <th>Username</th>
-      <th>Password</th>
-      <th>Aksi</th>
-     
-    </tr>
-  </thead>
-  <tbody>
-    @php
-    $no = 1;
-    @endphp
-    @foreach ($dtpengguna as $item)
-    <tr>
-        <td>{{ $no++ }}</td>
-        <td>{{ $item->name }}</td>
-        <td>{{ $item->mapel }}</td>
-        <td>{{ $item->level }}</td>
-        <td>{{ $item->email }}</td>
-        <td>{{ $item->password }}</td>
-
-      
-        <td>
-
-            <!-- <a href="{{ route('Datapengguna.edit', $item->id) }}"><i style="color : blue" class="material-icons"><i class="fas fa-edit"></i></i> </a> |  -->
-            <a href="{{ route('delete', $item->id) }}"><i style="color : red" class="material-icons"><i class="fas fa-trash-alt"></i></i> </a>
-       
-        </td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-
+                  <h4 class="card-title ">Data Siswa</h4>
+                </div>
+                <div class="card-body">
+                <table class="table" id="example"> 
+                <thead>
+                  
+                  <tr>
+                  <th>No</th>
+                  <th>Nama </th>
+                  <th>Mapel</th>
+                  <th>Level</th>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                @php
+                $no = 1;
+                @endphp
+                @foreach ($dtpengguna as $item)
+                  <tr>
+                  <td>{{ $no++ }}</td>
+                  <td>{{ $item->name }}</td>
+                  <td>{{ $item->mapel }}</td>
+                  <td>{{ $item->level }}</td>
+                  <td>{{ $item->email }}</td>
+                  <td>{{ $item->password }}</td>
+                  <td> 
+                    <a href="#modalDelete" data-toggle="modal" onclick="$('#modalDelete #formDelete').attr('action' , '{{ route('delete', $item->id) }}')" class="btn btn-danger">
+                      <i class="fa fa-trash"></i> delete 
+                    </a>   
+                  </td>
+                  </tr>
+                @endforeach
+              </tbody>
+              </table>
  <!-- /.col-md-6 -->
  </div>
         <!-- /.row -->
@@ -158,9 +156,7 @@
     </div>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
     <div class="p-3">
@@ -180,5 +176,38 @@
 <!-- REQUIRED SCRIPTS -->
     @include('Template.script')
     @include('sweetalert::alert')
+
+    <div class="modal fade" id="modalDelete">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+          <span aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title">Yakin Ingin Menghapus ?</h4>
+      </div>
+      <div class="modal-footer">
+        <form action="" id="formDelete" method="get">
+          <button class="btn btn-default" data-dismiss="modal" >Tidak</button>
+          <button class="btn btn-danger" type="submit">YA</button>
+        </form>
+      
+      </div>  
+    </div>
+  </div>
+</div>
+
+<!-- JAVA SCRIPT ONLY -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<!-- END JAVA SCRIPT -->
+
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+
+
 </body>
 </html>

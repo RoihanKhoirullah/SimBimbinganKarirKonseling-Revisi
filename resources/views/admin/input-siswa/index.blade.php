@@ -68,16 +68,16 @@
                           @csrf
 
                                 <div class="form-group">
-                                  <input type="text" id="nis" name="nis" class="form-control" placeholder="NIS " >
+                                  <input type="number" id="nis" name="nis" class="form-control" placeholder="NIS " required>
                                 </div>
 
                                 <div class="form-group">
-                                  <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama " >
+                                  <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama " onkeypress="return event.charCode <48 || event.charCode >57" required>
                                 </div>
 
                                 <div class="form-group">
-                                  <select name="rombel" id="rombel" class="form-control" >
-                                          <option>Rombel </option>
+                                  <select name="rombel" id="rombel" class="form-control" required>
+                                          <option value="">Rombel </option>
                                           <option value="rpl">Rpl</option>
                                           <option value="tkj">Tkj</option>
                                           <option value="mmd">Mmd</option>
@@ -89,12 +89,16 @@
                                 </div>
 
                                 <div class="form-group">
-                                  <select name="rayon" id="rayon" class="form-control">
-                                          <option>Rayon </option>
-                                          <option value="wikrama-1">Wikram 1</option>
-                                          <option value="wikrama-2">Wikram 2</option>
-                                          <option value="wikrama-3">Wikram 3</option>
-                                          <option value="wikrama-4">Wikram 4</option>
+                                  <select name="rayon" id="rayon" class="form-control"required>
+                                          <option value="">Rayon </option>
+                                          <option value="tajur 1">Tajur 1</option>
+                                          <option value="tajur 2">Tajur 2</option>
+                                          <option value="tajur 3">Tajur 3</option>
+                                          <option value="tajur 4">Tajur 4</option>
+                                          <option value="wikrama 1">Wikram 1</option>
+                                          <option value="wikrama 2">Wikram 2</option>
+                                          <option value="wikrama 3">Wikram 3</option>
+                                          <option value="wikrama 4">Wikram 4</option>
                                           
                                   </select>
                                 </div>
@@ -107,10 +111,14 @@
                                       <textarea class="form-control" name="masalah" id="masalah" rows="3" placeholder="Masalah" required></textarea>
                                 </div>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                   <select name="penyelesaianmasalah" id="penyelesaianmasalah" class="form-control">
                                           <option value="belum-selesai">Belum Selesai</option>
                                   </select>
+                                </div> -->
+
+                                <div class="form-group">
+                                  <input type="text" id="penyelesaianmasalah" value="belum selesai" name="penyelesaianmasalah" class="form-control" placeholder="penyelesaianmasalah " readonly>
                                 </div>
 
                                 <br>

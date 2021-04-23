@@ -76,8 +76,8 @@
 
           <div class="form-group">
           <label for="">Penyelesaian Masalah</label>
-            <select name="penyelesaianmasalah" id="penyelesaianmasalah" class="form-control">
-            <option>-- Penyelesaian Masalah --</option>
+            <select name="penyelesaianmasalah" id="penyelesaianmasalah" class="form-control" required>
+            <option value="{{ $datasiswa->penyelesaianmasalah}}">{{ $datasiswa->penyelesaianmasalah}}</option>
             <option value="sudah-selesai">Sudah Selesai</option>
             <option value="belum-selesai">Belum Selesai</option>
                     

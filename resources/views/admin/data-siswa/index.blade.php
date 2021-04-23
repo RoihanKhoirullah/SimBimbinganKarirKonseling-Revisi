@@ -3,6 +3,10 @@
 <html lang="en">
 <head>
   @include('Template.head')
+
+  <!-- CSS ONLY -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">   
+<!-- END CSS -->
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -43,9 +47,11 @@
         <div class="card-header">
         <div class="row">
 
-<div class="card-body table-responsive p-0">
-<table class="table table-hover text-nowrap">
-  <thead>
+        <h4 class="card-title ">Data Siswa</h4>
+                </div>
+                <div class="card-body">
+                <table class="table" id="example"> 
+                <thead>
     
     <tr>
       <th>No</th>
@@ -76,7 +82,9 @@
        
         <td>
 
-            <a href="{{ route('edit', $item->id) }}"><i style="color : blue" class="material-icons"><i class="fas fa-edit"></i></i> </a>  
+            <!-- <a href="{{ route('edit', $item->id) }}"><i style="color : blue" class="material-icons"><i class="fas fa-edit"></i></i> </a>   -->
+            <a class="btn btn-warning" href="{{ route('edit', $item->id) }}"><i class="fa fa-edit"></i>Edit </a>                              
+
             <!-- <a href="{{ route('delete', $item->id) }}"><i style="color : red" class="material-icons"><i class="fas fa-trash-alt"></i></i> </a> -->
        
         </td>
@@ -113,5 +121,17 @@
 <!-- REQUIRED SCRIPTS -->
     @include('Template.script')
     @include('sweetalert::alert')
+
+
+    <!-- JAVA SCRIPT ONLY -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<!-- END JAVA SCRIPT -->
+
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
 </body>
 </html>
