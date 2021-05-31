@@ -45,6 +45,6 @@
         </li>
     </ul>
     <div class="footer-bottom">
-        <p>All Right reserved &copy; 2020</p>
+        <p>All Right reserved &copy; 2021</p>
     </div>
 </footer>

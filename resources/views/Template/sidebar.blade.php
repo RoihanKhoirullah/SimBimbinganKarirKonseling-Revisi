@@ -76,6 +76,24 @@
               </li>
               @endif 
 
+              @if (auth()->user()->level=="guru")
+               <li class="nav-item">
+                <a href="/admin/guru" class="nav-link">
+                <i class="far fa-user"></i>
+                  <p>Data Laporan Siswa</p>
+                </a>
+              </li>
+              @endif
+
+              @if (auth()->user()->level=="pembimbing-siswa")
+               <li class="nav-item">
+                <a href="/admin/input-siswa" class="nav-link">
+                <i class="far fa-user"></i>
+                  <p>Laporkan Siswa</p>
+                </a>
+              </li>
+              @endif 
+
               @if (auth()->user()->level=="pembimbing-siswa")
                <li class="nav-item">
                 <a href="/admin/data-siswa" class="nav-link">

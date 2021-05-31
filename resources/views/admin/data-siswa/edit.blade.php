@@ -71,7 +71,7 @@
 
           <div class="form-group">
           <label for="">Rayon</label>
-            <input type="text" id="rayon" name="raypn" class="form-control" placeholder="Rayon" value="{{ $datasiswa->rayon}}" disabled>
+            <input type="text" id="rayon" name="rayon" class="form-control" placeholder="Rayon" value="{{ $datasiswa->rayon}}" disabled>
           </div>
 
           <div class="form-group">
@@ -82,7 +82,14 @@
             <option value="belum-selesai">Belum Selesai</option>
                     
             </select>
+
         </div>
+
+        
+        <div class="form-group">
+          <label for="">Kronologi</label>
+            <input type="text" id="kronologi" name="kronologi" class="form-control" placeholder="kronologi" value="{{ $datasiswa->kronologi}}" required>
+          </div>
 
          
 

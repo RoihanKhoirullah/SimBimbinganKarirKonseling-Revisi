@@ -63,7 +63,6 @@
       <th>Masalah </th>
       <th>Status </th>
       <th>Kronologi </th>
-      <th>Aksi </th>
     </tr>
   </thead>
   <tbody>
@@ -81,15 +80,6 @@
         <td>{{ $item->masalah }}</td>
         <td>{{ $item->penyelesaianmasalah }}</td>
         <td>{{ $item->kronologi }}</td>
-       
-        <td>
-
-            <!-- <a href="{{ route('edit', $item->id) }}"><i style="color : blue" class="material-icons"><i class="fas fa-edit"></i></i> </a>   -->
-            <a class="btn btn-warning" href="{{ route('edit', $item->id) }}"><i class="fa fa-edit"></i>Edit </a>                              
-
-            <!-- <a href="{{ route('delete', $item->id) }}"><i style="color : red" class="material-icons"><i class="fas fa-trash-alt"></i></i> </a> -->
-       
-        </td>
     </tr>
     @endforeach 
   </tbody>

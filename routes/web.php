@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +20,17 @@ Route::get('/', function () {
 //HOME
 Route::get('/index','user\HomeController@index');
 
+//PROFIILE
 Route::get('/profile','user\ProfileController@index');
+
+//PERANAN BK 
+Route::get('/peranan','user\PerananController@index');
+
+//LAYANAN BK 
+Route::get('/layanan','user\LayananController@index');
+
+//CONTACT BK 
+Route::get('/contact','user\ContactController@index');
 
 // LOGIN
 Route::get('/login', function () {
@@ -52,12 +61,19 @@ Route::group(['middleware' => ['auth','ceklevel:admin']], function() {
     Route::get('/admin/data-akun' , 'DatapenggunaController@index')->name('Datapengguna.index');
 
 });
-Route::group(['middleware' => ['auth','ceklevel:admin,guru']], function() {
+Route::group(['middleware' => ['auth','ceklevel:admin,guru,pembimbing-siswa']], function() {
 
     Route::get('/admin/data-siswa' , 'DatasiswaController@index')->name('data-siswa.index');
 
 });
-Route::group(['middleware' => ['auth','ceklevel:admin,guru']], function() {
+
+Route::group(['middleware' => ['auth','ceklevel:admin,guru,pembimbing-siswa']], function() {
+
+    Route::get('/admin/guru' , 'DatasiswaController@guru')->name('guru.index');
+
+});
+
+Route::group(['middleware' => ['auth','ceklevel:admin,guru,pembimbing-siswa']], function() {
 
     Route::get('/admin/input-siswa' , 'InputsiswaController@index')->name('input-siswa.index');
 

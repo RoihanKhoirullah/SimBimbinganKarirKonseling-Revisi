@@ -7,7 +7,7 @@
    <!--END NAVBAR -->
 
    <!--JUMBOTRON -->
-  <section id="jumbotron" class="fullheight align-items-center bg-img bg-img-fixed" style="background-image:url(asset/img/backdash.png);">
+  <section id="jumbotron" class="fullheight align-items-center bg-img bg-img-fixed" style="background-image:url(asset/img/back1.png);">
     <div class="container">
       <div class="row">
         <div class="col-6 col-xs-12">
@@ -16,12 +16,11 @@
                 Bimbingan Konseling </br>
                 & Karir
               </h1>
-              <p class="left-to-right play-on-scroll delay-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</br> 
-                Quaerat officia vel eligendi autem facere ut, quae minus </br>
-                saepe atque nisi aliquam veniam numquam illum? Libero nihil nisi</br>
-                quo iure et?</p>
+              <p class="left-to-right play-on-scroll delay-2" style="color:grey;">merupakan pelayanan yang menunjang pelaksanaan pendidikan di sekolah,</br> 
+              karena program-program bimbingan dan konseling meliputi aspek-aspek tugas perkembangan individu,</br> 
+              khususnya pada kematangan personal dan emosional, sosial, pendidikan serta kematangan karir</p>
                 <div class="left-to-right play-on-scroll delay-4">
-         <button >
+         <button>
            Butuh Konseling?
          </button>
                 </div>
@@ -41,12 +40,10 @@
                 <div class="col-5 col-xs-12 align-items-center">
                     <div class="about-slogan right-to-left play-on-scroll">
                     <h3>
-                        <span class="primary-color">Apa itu</span><br>Bimbingan Konseling & karir
+                        <span class="primary-color">Apa itu</span><br>Bimbingan Konseling & karir?
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit, vitae voluptatum quasi 
-                        earum ipsum nam quia, aut minus fugit, modi commodi consequuntur et labore velit neque? 
-                        Aliquid, ex rerum!
+                    merupakan pelayanan yang menunjang pelaksanaan pendidikan di sekolah, karena program-program bimbingan dan konseling meliputi aspek-aspek tugas perkembangan individu, khususnya pada kematangan personal dan emosional, sosial, pendidikan serta kematangan karir
                     </p>
                 </div>
                 </div>
@@ -62,40 +59,25 @@
       <div class="col">
       <img src="asset/img/backabout.png" alt="" class="medium ">
       </div>
-      <div class="col "><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Fugiat, excepturi ipsum aliquam magni dicta delectus alias dolorum
-     possimus dolor eos iste est inventore illo beatae impedit porro eum 
-     sapiente quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-     Delectus corporis voluptate earum reiciendis cumque recusandae nisi vel odit, 
-     alias nobis fuga, blanditiis quod provident modi dignissimos debitis incidunt a
-     nimi magni?</p>
+      <div class="col "><p>Menjadi sekolah kejuruan teladan berbudaya lingkungan yang unggul dalam pendidikan karakter yang berakhlaq mulia dengan kompetensi di bidang bisnis dan manajemen serta teknologi informasi dan komunikasi.</p>
      
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Fugiat, excepturi ipsum aliquam magni dicta delectus alias dolorum
-     possimus dolor eos iste est inventore illo beatae impedit porro eum 
-     sapiente quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-     Delectus corporis voluptate earum reiciendis cumque recusandae nisi vel odit, 
-     alias nobis fuga, blanditiis quod provident modi dignissimos debitis incidunt a</p>
+    <p>Dengan Tujuan : </br>
+    </br>1.Menghasilkan lulusan yang berkualitas, berkarakter kebangsaan dan kewirausahaan, berbudaya lingkungan, dan mengisi dunia kerja.
+    </br>2.Mewujudkan citra dan reputasi kepemimpinan dan kinerja sekolah yang baik.
+    </br>3.Mewujudkan kesejahteraan sosial sekolah.
+    </br>4.Mewujudkan sekolah sebagai benteng moralitas bangsa.</p>
   </div>
     </div>
   </div>  
-  <h1 class="mt-5">MISI</h1>
+  <h1 class="mt-5 ms-4">MISI</h1>
   <div class="row">
     <div class="col">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Fugiat, excepturi ipsum aliquam magni dicta delectus alias dolorum
-     possimus dolor eos iste est inventore illo beatae impedit porro eum 
-     sapiente quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-     Delectus corporis voluptate earum reiciendis cumque recusandae nisi vel odit, 
-     alias nobis fuga, blanditiis quod provident modi dignissimos debitis incidunt a
-     nimi magni?</p>
+  <p class="ms-4">1.Melaksanakan pendidikan kejuruan yang berkarakter kebangsaan, kewirausahaan, dan berbudaya lingkungan, yang relevan dengan kebutuhan dunia usaha/industri dan masyarakat.</br>
+</br>2.Membina jejaring kerjasama dengan potensi pengembangan sumberdaya manusia, inovasi tepat guna, dan kemajuan dunia usaha dan industri.</br>
+</br>3.Menyelenggarakan gerakan cinta tanah air, kepedulian lingkungan dan tanggung jawab sosial sekolah kepada masyarakat.</br></p>
      
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Fugiat, excepturi ipsum aliquam magni dicta delectus alias dolorum
-     possimus dolor eos iste est inventore illo beatae impedit porro eum 
-     sapiente quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-     Delectus corporis voluptate earum reiciendis cumque recusandae nisi vel odit, 
-     alias nobis fuga, blanditiis quod provident modi dignissimos debitis incidunt a</p>
+    <p class="ms-4">Dengan Motto : </br>
+ Ilmu yang Amaliah, Amal yang ilmiah, Akhlaqul Karimah</p>
      </div>
      <div class="col">
      <img src="asset/img/backabout.png" alt="" class="medium ">

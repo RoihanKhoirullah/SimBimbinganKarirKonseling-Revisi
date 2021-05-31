@@ -17,6 +17,12 @@ class DatasiswaController extends Controller
         return view('admin.data-siswa.index', compact('datasiswa') );
     }
 
+    public function guru()
+    {
+        $datasiswa = Datasiswa::all();
+        return view('admin.guru.index', compact('datasiswa') );
+    }
+
     /**
      * Show the form for creating a new resource.
      *

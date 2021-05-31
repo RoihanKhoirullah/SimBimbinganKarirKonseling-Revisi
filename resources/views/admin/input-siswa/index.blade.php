@@ -118,11 +118,22 @@
                                 </div> -->
 
                                 <div class="form-group">
+                                  <label for="">Status</label>
                                   <input type="text" id="penyelesaianmasalah" value="belum selesai" name="penyelesaianmasalah" class="form-control" placeholder="penyelesaianmasalah " readonly>
                                 </div>
 
-                                <br>
-                                <br>
+                                <div class="form-group">
+                                  <label for="">Kronologi</label>
+                                  <input type="text" id="kronolgi" value="-" name="kronologi" class="form-control" placeholder="-" readonly>
+                                </div>
+
+                              
+                              
+
+                                <!-- <div class="form-group">
+
+                                <textarea class="form-control" name="kronologi" id="kronologi" rows="3" value="asal weh deuh" readonly></textarea>
+                                </div> -->
                                 
                     </div>
                     <div class="modal-footer">

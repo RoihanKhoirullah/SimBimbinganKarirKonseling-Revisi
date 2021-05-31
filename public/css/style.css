@@ -8,6 +8,7 @@
 html {
 
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a,
@@ -18,15 +19,11 @@ a:active {
     color: inherit;
 }
 
+/*NAVBAR*/
 .navbar-brand {
     color: grey;
 }
 
-.nav-link-active {
-    background-color: hotpink;
-    color: white;
-    border-radius: 1rem;
-}
 
 .nav-link {
     cursor: pointer;
@@ -40,6 +37,13 @@ a:active {
 }
 
 
+.nav-link:active {
+    background-color: hotpink;
+    color: white;
+    border-radius: 1rem;
+}
+
+/*JUMBTRON-HOME*/
 .fullheight {
     height: 100vh;
 }
@@ -77,26 +81,31 @@ section {
 
 .slogan h1 {
     font-size: 3rem;
-    color: white;
+    color: grey;
 }
+
 
 .slogan button {
     padding: 1rem 5rem;
     outline: none;
     border: none;
-    background-color: transparent;
-    border: .125rem solid hotpink;
+    background-color: #f78fb3;
+    border: .125rem solid#f78fb3;
     border-radius: 2rem;
-    color: hotpink;
+    color: white;
     margin: 3rem 0;
     cursor: pointer;
     font-weight: 600;
     transition: .5s ease-in-out;
 }
 
+.slogan p {
+    color: whitesmoke;
+}
+
 .slogan button:hover {
-    background-color: hotpink;
-    color: white;
+    background-color: transparent;
+    color: hotpink;
 }
 
 .fullwidth {
@@ -107,6 +116,7 @@ section {
     width: 90%;
 }
 
+/*APA ITU BK?*/
 #about img {
     border-radius: 2rem;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
@@ -134,6 +144,10 @@ section {
 
 .primary-color {
     color: hotpink;
+}
+
+.heading-profile {
+    font-size: 95px;
 }
 
 #visiMisi img {
@@ -203,6 +217,30 @@ section {
     background-color: white;
 }
 
+/*PERANAN BK*/
+.card:hover {
+
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.areatext {
+    height: 150px;
+}
+
+.contactsubmit {
+    height: 50px;
+    background-color: hotpink;
+    color: white;
+    border: solid hotpink;
+}
+
+.contactsubmit:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+/*FOOTER*/
 footer {
     display: -webkit-flex;
     display: -moz-flex;
@@ -289,6 +327,15 @@ h4 {
     font-size: 20px;
 }
 
+.circle {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: solid gray;
+    border-radius: 100%;
+}
+
 @media screen and (min-width:600px) {
     .footer-right>* {
         flex: 1;
@@ -320,6 +367,15 @@ h4 {
 
 .right-to-left.start {
     transform: translateX(0);
+}
+
+.bottom-up {
+    transform: translateY(30%);
+    transition: .6s ease-in-out;
+}
+
+.bottom-up.start {
+    transform: translateY(0);
 }
 
 .delay-2 {

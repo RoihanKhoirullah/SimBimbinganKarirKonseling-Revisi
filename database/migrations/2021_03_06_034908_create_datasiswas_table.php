@@ -22,6 +22,7 @@ class CreateDatasiswasTable extends Migration
             $table->string('rayon');
             $table->string('masalah');
             $table->string('penyelesaianmasalah');
+            $table->string('kronologi');
             $table->timestamps();
         });
     }

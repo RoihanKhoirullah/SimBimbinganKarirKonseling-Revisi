@@ -44,6 +44,7 @@ class InputsiswaController extends Controller
             'rayon' => $request -> rayon,
             'masalah' => $request -> masalah,
             'penyelesaianmasalah' => $request -> penyelesaianmasalah,
+            'kronologi' => $request -> kronologi,
            
             
          ]);
